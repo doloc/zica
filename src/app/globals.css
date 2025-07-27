@@ -1,0 +1,118 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Be Vietnam Pro', system-ui, sans-serif;
+}
+
+@layer utilities {
+  .animate-bounce-slow {
+    animation: bounce 2.5s infinite;
+  }
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-18px);
+  }
+}
+
+.swiper-wrapper .swiper-slide-prev {
+  transform: translate3d(73%, 0px, -500px) rotateX(0deg) rotateY(0deg) scale(1) !important;
+}
+
+.swiper-wrapper .swiper-slide-next {
+  transform: translate3d(-73%, 0px, -500px) rotateX(0deg) rotateY(0deg) scale(1) !important;
+}
+
+.special-features-swiper .swiper-slide-next,
+.special-features-swiper .swiper-slide-prev {
+  z-index: 5;
+  filter: grayscale(1) brightness(0.7);
+  transform: scale(0.95);
+}
+
+.hide-scroll {
+  overflow: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+}
+
+.hide-scroll::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.swiper-pagination-custom {
+  bottom: -3% !important;
+
+  @media screen and (max-width: 768px) {
+    bottom: -10% !important;
+  }
+}
+
+.swiper-pagination-custom .swiper-pagination-bullet {
+  background-color: #001031 !important;
+  width: 0.8vw !important;
+  height: 0.8vw !important;
+  border-radius: 100%;
+  opacity: 1 !important;
+
+  @media screen and (max-width: 768px) {
+    width: 2.5vw !important;
+    height: 2.5vw !important;
+  }
+}
+
+.swiper-pagination-custom .swiper-pagination-bullet:hover {
+  background-color: #fff085 !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease-in-out !important;
+}
+
+.swiper-pagination-custom .swiper-pagination-bullet-active {
+  background-color: #06FCD0 !important;
+  border: 1px solid #ffffff !important;
+  scale: 1.1 !important;
+  width: 0.8vw !important;
+  height: 0.8vw !important;
+  border-radius: 100%;
+  opacity: 1;
+
+  @media screen and (max-width: 768px) {
+    width: 2.5vw !important;
+    height: 2.5vw !important;
+  }
+}
+
+.btn-image:hover {
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
