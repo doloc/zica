@@ -7,7 +7,7 @@ import { useState } from "react";
 const navLinks = [
   { href: "/", label: "Trang Chủ" },
   { href: "/tin-tuc", label: "Tin Tức" },
-  { href: "/su-kien", label: "Sự Kiện" },
+  { href: "/su-kien/tan-thu", label: "Sự Kiện" },
   { href: "/ho-tro", label: "Hỗ Trợ" },
   { href: "/cong-dong", label: "Cộng Đồng" },
 ];

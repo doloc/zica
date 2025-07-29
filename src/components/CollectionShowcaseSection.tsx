@@ -49,7 +49,7 @@ const CollectionShowcase = () => {
                     onClick={() => {setActiveTab(tab.value); setItemIndex(0); setActiveItemTab("ITEM");}}
                     className={`px-2 py-1 rounded-full font-bold text-xs transition border-3 flex gap-2 items-center
                       ${activeTab === tab.value ? "bg-[linear-gradient(180deg,_#FAFBA1_36.06%,_#F3AC46_63.94%)] shadow-[inset_0px_5px_2px_#F1B64F,_inset_0px_-5px_2px_rgba(255,225,0,0.9)] border-[#BA3F02] text-[#910100]" : 
-                        "bg-[linear-gradient(180deg,_#939393_36.06%,_#5B5B5B_63.94%)] shadow-[inset_0px_5px_2px_#ffffff,_inset_0px_-5px_2px_#959595] border-[#5E5E5E] text-white hover:cursor-pointer hover:text-[3910100] hover:scale-105"}`}
+                        "bg-[linear-gradient(180deg,_#939393_36.06%,_#5B5B5B_63.94%)] shadow-[inset_0px_5px_2px_#ffffff,_inset_0px_-5px_2px_#959595] border-[#5E5E5E] text-white hover:cursor-pointer hover:text-[#910100] hover:scale-105"}`}
                   >
                     <div className={`w-[22%] aspect-square rounded-full ${activeTab === tab.value ? "bg-[#FFBF00]" : "bg-[#939393]"}`}>
                       <img src={tab.image} alt="" className={`w-full h-auto ${activeTab === tab.value ? "" : "grayscale"}`} />
@@ -147,7 +147,7 @@ const CollectionShowcase = () => {
                       onClick={() => {setActiveTab(tab.value); setItemIndex(0); setActiveItemTab("ITEM");}}
                       className={`w-full aspect-[197/54] rounded-full font-bold text-[1vw] transition border-3 flex gap-2 items-center
                         ${activeTab === tab.value ? "bg-[linear-gradient(180deg,_#FAFBA1_36.06%,_#F3AC46_63.94%)] shadow-[inset_0px_5px_2px_#F1B64F,_inset_0px_-5px_2px_rgba(255,225,0,0.9)] border-[#BA3F02] text-[#910100]" : 
-                          "bg-[linear-gradient(180deg,_#939393_36.06%,_#5B5B5B_63.94%)] shadow-[inset_0px_5px_2px_#ffffff,_inset_0px_-5px_2px_#959595] border-[#5E5E5E] text-white hover:cursor-pointer hover:text-[3910100] hover:scale-105"}`}
+                          "bg-[linear-gradient(180deg,_#939393_36.06%,_#5B5B5B_63.94%)] shadow-[inset_0px_5px_2px_#ffffff,_inset_0px_-5px_2px_#959595] border-[#5E5E5E] text-white hover:cursor-pointer hover:text-[#910100] hover:scale-105"}`}
                     >
                       <div className={`w-[22%] aspect-square rounded-full ${activeTab === tab.value ? "bg-[#FFBF00]" : "bg-[#939393]"}`}>
                         <img src={tab.image} alt="" className={`w-full h-auto ${activeTab === tab.value ? "" : "grayscale"}`} />
