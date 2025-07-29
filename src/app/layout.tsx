@@ -87,9 +87,36 @@ export default function RootLayout({
     <html lang="vi" className="mdl-js">
       <Head>
         <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;900&display=swap" rel="stylesheet" />
-        <link rel="icon" href="/images/logo-zica.png" />
-        <link rel="apple-touch-icon" href="/images/logo-zica.png" />
+        
+        {/* Favicon */}
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/icon-192.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/icon-192.png" />
+        
+        {/* Apple Touch Icons */}
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon.png" />
+        <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon.png" />
+        <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon.png" />
+        <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon.png" />
+        <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon.png" />
+        
+        {/* Android Icons */}
+        <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png" />
+        <link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png" />
+        
+        {/* Microsoft Tiles */}
+        <meta name="msapplication-TileImage" content="/icon-192.png" />
+        <meta name="msapplication-TileColor" content="#3E33FF" />
+        <meta name="msapplication-config" content="/browserconfig.xml" />
+        
+        {/* PWA Manifest */}
         <link rel="manifest" href="/manifest.json" />
+        
+        {/* Viewport and Mobile */}
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
@@ -97,7 +124,6 @@ export default function RootLayout({
         <meta name="application-name" content="ZiCA" />
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="theme-color" content="#3E33FF" />
-        <meta name="msapplication-TileColor" content="#3E33FF" />
       </Head>
       <body className="font-bevietnampro">
         <main className="w-full flex flex-col items-center justify-center">
