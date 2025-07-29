@@ -37,7 +37,7 @@ export const scaleFitDesign = (onlyPc, transformOrigin = "top left") => {
 };
 
 export function toSlug(str = "") {
-  var slug = str.trim().toLowerCase();
+  let slug = str.trim().toLowerCase();
   //Đổi ký tự có dấu thành không dấu
   slug = slug.replace(/á|à|ả|ạ|ã|ă|ắ|ằ|ẳ|ẵ|ặ|â|ấ|ầ|ẩ|ẫ|ậ/gi, "a");
   slug = slug.replace(/é|è|ẻ|ẽ|ẹ|ê|ế|ề|ể|ễ|ệ/gi, "e");
@@ -70,9 +70,9 @@ export const openOA = () => {
   window.open(isIOS() ? SocialData.ZALO_OA_IOS : SocialData.ZALO_OA_ANDROID);
 };
 export function pointNumber(number) {
-  var dot =
+  const dot =
     arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : ".";
-  var value = Math.floor(Math.abs(number));
+  const value = Math.floor(Math.abs(number));
   return (
     (number < 0 ? "-" : "") +
     String(value).replace(/\B(?=(\d{3})+(?!\d))/g, dot)
