@@ -69,45 +69,136 @@ const Hero = () => {
         /> */}
 
         {/* CTA Buttons - PC Only*/}
-        <div className="hidden md:flex absolute top-[43%] w-[35.2%] bg-[linear-gradient(180deg,_#FF4C16_36.06%,_#A90030_63.94%)] rounded-xl border-amber-200 border-8 border-solid" >
-          <Link href="" className="w-[35%] flex justify-center items-center">
-            <img 
-              src="/images/btn-napthe.png" 
-              alt="Nạp thẻ" 
-              className="w-full h-auto btn-image"
-              style={{ aspectRatio: '233/120' }}
-            />
-          </Link>
-          <div className="w-[30%] flex flex-col justify-center items-center">
-            <Link href="" className="w-[85%]">
-              <img 
-                src="/images/btn-zalo.png" 
-                alt="Sinh nhật" 
+        <motion.div 
+          className="hidden md:flex absolute top-[43%] w-[35.2%] bg-[linear-gradient(180deg,_#FF4C16_36.06%,_#A90030_63.94%)] rounded-xl border-amber-200 border-8 border-solid"
+          initial={{ opacity: 0, scale: 0.8, y: 50 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          transition={{ 
+            duration: 0.8, 
+            delay: 0.5,
+            type: "spring",
+            stiffness: 100,
+            damping: 15
+          }}
+          whileHover={{ 
+            scale: 1.02,
+            boxShadow: "0 0 30px rgba(255, 76, 22, 0.4)"
+          }}
+        >
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.8 }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.98 }}
+            className="w-[35%] flex justify-center items-center"
+          >
+            <Link href="" className="w-full">
+              <motion.img 
+                src="/images/btn-napthe.png" 
+                alt="Nạp thẻ" 
                 className="w-full h-auto btn-image"
-                style={{ aspectRatio: '166/48' }}
+                style={{ aspectRatio: '233/120' }}
+                whileHover={{ 
+                  scale: 1.08,
+                  filter: "brightness(1.1) drop-shadow(0 0 8px rgba(255, 255, 255, 0.3))"
+                }}
+                whileTap={{ scale: 0.95 }}
+                transition={{ duration: 0.2 }}
               />
             </Link>
-            <Link href="" className="w-[85%]">
-              <img 
-                src="/images/btn-fb.png" 
-                alt="Cộng đồng" 
+          </motion.div>
+          
+          <motion.div 
+            className="w-[30%] flex flex-col justify-center items-center gap-2"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 1.0 }}
+          >
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="w-[85%]"
+            >
+              <Link href="" className="w-full">
+                <motion.img 
+                  src="/images/btn-zalo.png" 
+                  alt="Sinh nhật" 
+                  className="w-full h-auto btn-image"
+                  style={{ aspectRatio: '166/48' }}
+                  whileHover={{ 
+                    scale: 1.1,
+                    filter: "brightness(1.1) drop-shadow(0 0 6px rgba(0, 123, 255, 0.4))"
+                  }}
+                  whileTap={{ scale: 0.95 }}
+                  transition={{ duration: 0.2 }}
+                />
+              </Link>
+            </motion.div>
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="w-[85%]"
+            >
+              <Link href="" className="w-full">
+                <motion.img 
+                  src="/images/btn-fb.png" 
+                  alt="Cộng đồng" 
+                  className="w-full h-auto btn-image"
+                  style={{ aspectRatio: '166/48' }}
+                  whileHover={{ 
+                    scale: 1.1,
+                    filter: "brightness(1.1) drop-shadow(0 0 6px rgba(66, 103, 178, 0.4))"
+                  }}
+                  whileTap={{ scale: 0.95 }}
+                  transition={{ duration: 0.2 }}
+                />
+              </Link>
+            </motion.div>
+          </motion.div>
+          
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.8 }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.98 }}
+            className="w-[35%] flex justify-center items-center"
+          >
+            <Link href="" className="w-full">
+              <motion.img 
+                src="/images/btn-choingay.png" 
+                alt="Chơi ngay" 
                 className="w-full h-auto btn-image"
-                style={{ aspectRatio: '166/48' }}
+                style={{ aspectRatio: '233/120' }}
+                whileHover={{ 
+                  scale: 1.08,
+                  filter: "brightness(1.1) drop-shadow(0 0 10px rgba(255, 215, 0, 0.5))"
+                }}
+                whileTap={{ scale: 0.95 }}
+                animate={{ 
+                  scale: [1, 1.03, 1],
+                  filter: ["brightness(1)", "brightness(1.05)", "brightness(1)"]
+                }}
+                transition={{ 
+                  duration: 3,
+                  repeat: Infinity,
+                  repeatType: "reverse"
+                }}
               />
             </Link>
-          </div>
-          <Link href="" className="w-[35%] flex justify-center items-center">
-            <img 
-              src="/images/btn-choingay.png" 
-              alt="Chơi ngay" 
-              className="w-full h-auto btn-image"
-              style={{ aspectRatio: '233/120' }}
-            />
-          </Link>
-        </div>
+          </motion.div>
+        </motion.div>
       </section>
       <div className="absolute z-10 top-[57.2%] md:top-[58%] w-[92.5%] md:w-[67.7%] flex flex-col items-center bg-cover bg-center bg-no-repeat aspect-[347/616] md:aspect-[1300/768] bg-[url('/images/mb-news-fr.png')] md:bg-[url('/images/pc-news-fr.png')]">
-        <img src="/images/tx_tintuc_sukien.png" alt="news-fr" className="-mt-[8%] md:-mt-[2%] w-[92.5%] md:w-3/5 object-contain" />
+        <motion.img 
+          src="/images/tx_tintuc_sukien.png" 
+          alt="news-fr" 
+          className="-mt-[8%] md:-mt-[2%] w-[92.5%] md:w-3/5 object-contain"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+        />
         <div className="w-[85%] md:w-[88.15%] flex flex-col md:grid md:grid-cols-2 gap-[2%]">
           <div className="relative w-full">
             <AnimatePresence mode="wait">
@@ -125,12 +216,14 @@ const Hero = () => {
 
             {/* carousel */}
             <div className="w-full mt-[10%] md:mt-[5%] flex justify-center items-center">
-              <button
+              <motion.button
                 onClick={handlePrev}
                 className="absolute left-[25%] w-[10%] md:w-[8%] bg-cover bg-center bg-no-repeat aspect-square bg-[url('/images/btn-prev.png')] hover:brightness-110 hover:scale-110 hover:cursor-pointer transition-all duration-300"
                 aria-label="Previous"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
               >
-              </button>
+              </motion.button>
               {/* pagination */}
               <div className="absolute w-[50%] flex justify-center items-center gap-[3%]">
                 {newsItems.map((_, idx) => (
@@ -146,12 +239,14 @@ const Hero = () => {
                   />
                 ))}
               </div>
-              <button
+              <motion.button
                 onClick={handleNext}
                 className="absolute right-[25%] w-[10%] md:w-[8%] bg-cover bg-center bg-no-repeat aspect-square bg-[url('/images/btn-next.png')] hover:brightness-110 hover:scale-110 hover:cursor-pointer transition-all duration-300"
                 aria-label="Next"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
               >
-              </button>
+              </motion.button>
             </div>
           </div>
           <div className="mt-[10%] md:mt-0 w-full">

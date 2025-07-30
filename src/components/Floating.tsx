@@ -78,11 +78,18 @@ const Floating: FC<{
           )}
         </AnimatePresence>
         
-        <div className="absolute top-[45%] left-0 w-1/5 bg-cover bg-center bg-no-repeat aspect-square bg-[url('/images/fr_item.png')] flex justify-center items-center cursor-pointer hover:scale-110 transition-transform" onClick={toggleExpand}>
-          {isExpanded ? <FontAwesomeIcon className="text-[#000A35] text-3xl font-extrabold" icon={faAnglesRight} /> : <FontAwesomeIcon className="text-[#000A35] text-3xl font-extrabold" icon={faAnglesLeft} />}
-        </div>
-
-
+        <motion.div 
+          className="absolute top-[45%] left-0 w-1/5 bg-cover bg-center bg-no-repeat aspect-square bg-[url('/images/fr_item.png')] flex justify-center items-center cursor-pointer hover:scale-110 transition-transform" 
+          onClick={toggleExpand}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          animate={{
+            rotate: isExpanded ? 0 : 180,
+          }}
+          transition={{ duration: 0.3 }}
+        >
+          <FontAwesomeIcon className="text-[#000A35] text-3xl font-extrabold" icon={faAnglesRight} />
+        </motion.div>
       </motion.div>
     </div>
   );

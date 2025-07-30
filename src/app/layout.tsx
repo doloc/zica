@@ -3,6 +3,7 @@ import "./globals.css";
 import Footer from "@/components/FooterSection";
 import Head from "next/head";
 import { Toaster } from "react-hot-toast";
+import AnimatedBackground from "@/components/AnimatedBackground";
 
 export const metadata: Metadata = {
   title: "ZiCA - Môi trường chơi game đầy thú vị",
@@ -126,6 +127,7 @@ export default function RootLayout({
         <meta name="theme-color" content="#3E33FF" />
       </Head>
       <body className="font-bevietnampro">
+        <AnimatedBackground />
         <main className="w-full flex flex-col items-center justify-center">
           {children}
         </main>

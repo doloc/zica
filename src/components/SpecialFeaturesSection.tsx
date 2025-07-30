@@ -47,9 +47,13 @@ const SpecialFeatures = () => {
       </motion.img>
       <div className="relative w-[94%] md:w-[60%] flex items-center justify-center ">
         {/* Custom Prev Button */}
-        <div className="swiper-button-prev-custom absolute -left-[1%] md:-left-[4%] top-1/2 -translate-y-1/2 z-10 hover:scale-110 transition-all duration-300 hover:brightness-110 hover:cursor-pointer">
+        <motion.div 
+          className="swiper-button-prev-custom absolute -left-[1%] md:-left-[4%] top-1/2 -translate-y-1/2 z-10 hover:scale-110 transition-all duration-300 hover:brightness-110 hover:cursor-pointer"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+        >
           <img src="/images/prev.png" alt="Prev" className="w-[45%] md:w-[60%] object-cover" />
-        </div>
+        </motion.div>
         {/* w-[87.7%]  */}
         <div className="relative w-full flex items-center justify-center">
           {/* Swiper Carousel */}
@@ -88,9 +92,13 @@ const SpecialFeatures = () => {
           </Swiper>
         </div>
         {/* Custom Next Button */}
-        <div className="swiper-button-next-custom absolute -right-[15%] md:-right-[8%] top-1/2 -translate-y-1/2 z-10 hover:scale-110 transition-all duration-300 hover:brightness-110 hover:cursor-pointer">
+        <motion.div 
+          className="swiper-button-next-custom absolute -right-[15%] md:-right-[8%] top-1/2 -translate-y-1/2 z-10 hover:scale-110 transition-all duration-300 hover:brightness-110 hover:cursor-pointer"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+        >
           <img src="/images/next.png" alt="Next" className="w-[45%] md:w-[60%] object-cover" />
-        </div>
+        </motion.div>
 
         {/* Custom Pagination */}
         <div className="absolute swiper-pagination-custom w-full left-0 right-0 flex justify-center">

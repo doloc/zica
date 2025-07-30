@@ -15,14 +15,20 @@ const CollectionShowcase = () => {
   const handlePrev = () => {
     setItemIndex((prev) => {
       const items = datasource.find((tab) => tab.value === activeTab)?.items;
-      return items ? (prev === 0 ? items.length - 1 : prev - 1) : prev;
+      const result = items ? (prev === 0 ? items.length - 1 : prev - 1) : prev;
+      if (activeTab === "items" && activeItemTab === "ITEM" && result >= 10) setActiveItemTab("PET");
+      if (activeTab === "items" && activeItemTab === "PET" && result < 10) setActiveItemTab("ITEM");
+      return result;
     });
   };
 
   const handleNext = () => {
     setItemIndex((prev) => {
       const items = datasource.find((tab) => tab.value === activeTab)?.items;
-      return items ? (prev === items.length - 1 ? 0 : prev + 1) : prev;
+      const result = items ? (prev === items.length - 1 ? 0 : prev + 1) : prev;
+      if (activeTab === "items" && activeItemTab === "ITEM" && result >= 10) setActiveItemTab("PET");
+      if (activeTab === "items" && activeItemTab === "PET" && result < 10) setActiveItemTab("ITEM");
+      return result;
     });
   };
 
